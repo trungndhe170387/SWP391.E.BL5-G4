@@ -113,7 +113,7 @@ if (successMessage != null) {
                     </div>
 
                     <div style="background: green" class="form-input pt-30">
-                        <a href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?scope=email profile&redirect_uri=http%3A%2F%2Flocalhost%3A9999%2Fholalearn%2Flogin&response_type=code&client_id=858666386841-i773lqh7jdqoo9pdgoj5984l0uc1ndbn.apps.googleusercontent.com&approval_prompt=force&service=lso&o2v=1&flowName=GeneralOAuthFlow"
+                        <a href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?scope=email profile&redirect_uri=http://localhost:9999/SWP391.E.BL5-G4/login&response_type=code&client_id=782277117461-o1v2psh7r1luphl71loo5bt2u0hq2svv.apps.googleusercontent.com&approval_prompt=force&service=lso&o2v=1&flowName=GeneralOAuthFlow"
                            ><i class="display-flex-center zmdi zmdi-google"></i><h2 
                                 style="color: white;">Login with Google</h2></a>
                     </div>
