@@ -21,6 +21,12 @@ import model.Blog;
 @WebServlet(name = "BlogOwnerController", urlPatterns = {"/blog_marketer"})
 public class BlogOwnerController {
 
+
+    protected void doAuthGet(HttpServletRequest request, HttpServletResponse response, Account acc) throws ServletException, IOException {
+        request.getRequestDispatcher("blog_marketer.jsp").forward(request, response);
+    }
+
+
     protected void doAuthPost(HttpServletRequest request, HttpServletResponse response, Account acc) throws ServletException, IOException {
         BlogDAO dao = new BlogDAO();
         HttpSession session = request.getSession();

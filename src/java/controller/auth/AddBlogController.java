@@ -23,16 +23,18 @@ import model.Account;
  */
 @MultipartConfig
 @WebServlet(name = "AddBlogController", urlPatterns = {"/blogadd"})
-public class AddBlogController {
+public class AddBlogController{
+
 
     protected void doAuthGet(HttpServletRequest request, HttpServletResponse response, Account acc) throws ServletException, IOException {
         request.getRequestDispatcher("blogadd.jsp").forward(request, response);
     }
 
+
     protected void doAuthPost(HttpServletRequest request, HttpServletResponse response, Account acc) throws ServletException, IOException {
         String mess = null;
         String imageName = null;
-        String savePath = "D:/FU_FPT/SWP391/image/";
+        String savePath = "D:/Sem5_Fall2023/SWP391/image/";
         File file = new File(savePath);
         if (!file.exists()) {
             file.mkdirs();
