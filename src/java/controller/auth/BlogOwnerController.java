@@ -19,14 +19,8 @@ import model.Blog;
  * @author Admin
  */
 @WebServlet(name = "BlogOwnerController", urlPatterns = {"/blog_marketer"})
-public class BlogOwnerController extends BaseRequiredAuthorizationController {
+public class BlogOwnerController {
 
-    @Override
-    protected void doAuthGet(HttpServletRequest request, HttpServletResponse response, Account acc) throws ServletException, IOException {
-        request.getRequestDispatcher("blog_marketer.jsp").forward(request, response);
-    }
-
-    @Override
     protected void doAuthPost(HttpServletRequest request, HttpServletResponse response, Account acc) throws ServletException, IOException {
         BlogDAO dao = new BlogDAO();
         HttpSession session = request.getSession();
