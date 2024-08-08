@@ -26,10 +26,7 @@ import org.apache.http.client.fluent.Form;
 import org.apache.http.client.fluent.Request;
 import security.MD5Encryption;
 
-/**
- *
- * @author HoangAnh
- */
+
 @WebServlet(name = "LoginController", urlPatterns = "/login")
 public class LoginController extends HttpServlet {
 

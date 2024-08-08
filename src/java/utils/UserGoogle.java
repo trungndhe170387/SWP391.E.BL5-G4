@@ -4,10 +4,7 @@
  */
 package utils;
 
-/**
- *
- * @author HoangAnh
- */
+
 public class UserGoogle {
     private String id;
 

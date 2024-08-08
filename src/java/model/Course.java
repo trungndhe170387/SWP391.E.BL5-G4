@@ -4,10 +4,7 @@
  */
 package model;
 
-/**
- *
- * @author lam12
- */
+
 public class Course {
 
    private int course_id;

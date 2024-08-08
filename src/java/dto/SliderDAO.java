@@ -20,10 +20,7 @@ import model.Learner_Subject;
 import model.Slider;
 import model.Subject;
 
-/**
- *
- * @author Admin
- */
+
 public class SliderDAO extends DBContext {
 
     public List<Slider> getAllSliderSubject() {

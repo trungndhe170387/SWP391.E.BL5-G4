@@ -16,10 +16,7 @@ import model.Learner_Course;
 import model.Learner_Subject;
 import model.Subject;
 
-/**
- *
- * @author lam12
- */
+
 public class Subject1DAO extends DBContext {
 
     // Lay tat ca cac Subject

@@ -1,9 +1,4 @@
-<%-- 
-    Document   : Login
-    Created on : Sep 18, 2023, 10:56:36 PM
-    Author     : HaLB
 
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>

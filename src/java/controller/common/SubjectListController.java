@@ -18,10 +18,6 @@ import model.Course;
 import model.Learner_Subject;
 import model.Subject;
 
-/**
- *
- * @author admin
- */
 @WebServlet(name = "SubjectListController", urlPatterns = {"/subjectlist"})
 public class SubjectListController extends HttpServlet {
 
