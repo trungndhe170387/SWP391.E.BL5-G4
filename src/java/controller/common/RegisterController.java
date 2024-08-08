@@ -19,7 +19,7 @@ import utils.EmailUtils;
 
 /**
  *
- * @author HoangAnh
+ * @author meddy
  */
 @WebServlet(name = "RegisterController", urlPatterns = "/register")
 public class RegisterController extends HttpServlet {
@@ -77,7 +77,7 @@ public class RegisterController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        AccountDAO ad = new AccountDAO();
+        AccountDAO ad = new AccountDAO(); //Data Access Object
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String confirm = request.getParameter("confirm");
