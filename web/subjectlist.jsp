@@ -1,8 +1,3 @@
-<%-- 
-    Document   : courselist
-    Created on : Sep 18, 2023, 3:45:17 PM
-    Author     : admin
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
