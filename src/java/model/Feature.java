@@ -6,10 +6,7 @@ package model;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author nocol
- */
+
 public class Feature {
 
     private int id;

@@ -1,8 +1,4 @@
-<%-- 
-    Document   : UserProfile
-    Created on : Sep 20, 2023, 1:22:08 PM
-    Author     : lam12
---%>
+
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -225,13 +221,6 @@
                                                         <label class="form-label">Phone</label>
                                                         <input class="form-control" type="number" name="phone" disabled="disabled" value="" id="phone">
                                                         <span id="phoneError" class="error"></span><br>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col">
-                                                    <div class="form-group">
-                                                        <a href="changepassword" class="btn btn-default text-lg-left" style="">Change Password</a>
                                                     </div>
                                                 </div>
                                             </div>

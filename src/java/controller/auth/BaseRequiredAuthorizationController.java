@@ -13,10 +13,6 @@ import java.util.ArrayList;
 import model.Feature;
 import model.Account;
 
-/**
- *
- * @author nocol
- */
 public abstract class BaseRequiredAuthorizationController extends BaseAuthenticationController {
 
     private boolean isAuthorization(HttpServletRequest request, Account acc) {

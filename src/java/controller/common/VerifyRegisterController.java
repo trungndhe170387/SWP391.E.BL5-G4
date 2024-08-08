@@ -13,10 +13,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author HoangAnh
- */
+
 @WebServlet(name = "VerifyRegisterController", urlPatterns = "/verifyregister")
 public class VerifyRegisterController extends HttpServlet {
 

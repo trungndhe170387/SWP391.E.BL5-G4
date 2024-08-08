@@ -1,8 +1,4 @@
-<%-- 
-    Document   : VerifyRegister
-    Created on : Sep 19, 2023, 9:44:41 PM
-    Author     : HoangAnh
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

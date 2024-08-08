@@ -9,10 +9,7 @@ import java.util.Random;
 import javax.mail.*;
 import javax.mail.internet.*;
 
-/**
- *
- * @author nocol
- */
+
 public class EmailUtils {
 
     private static final String EMAIL_USERNAME = "leha104203@gmail.com";

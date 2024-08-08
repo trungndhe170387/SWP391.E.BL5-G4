@@ -17,10 +17,6 @@ import java.time.Period;
 import model.Account;
 import utils.EmailUtils;
 
-/**
- *
- * @author meddy
- */
 @WebServlet(name = "RegisterController", urlPatterns = "/register")
 public class RegisterController extends HttpServlet {
 

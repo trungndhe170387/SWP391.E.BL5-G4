@@ -1,8 +1,4 @@
-<%-- 
-    Document   : Register
-    Created on : Sep 19, 2023, 12:13:09 AM
-    Author     : HoangAnh
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
@@ -10,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title> SWP391.BL5.G4</title>
+        <title> App landing</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="manifest" href="site.webmanifest">

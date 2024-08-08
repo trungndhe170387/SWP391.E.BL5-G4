@@ -1,8 +1,4 @@
-<%-- 
-    Document   : ChangePassword
-    Created on : Sep 19, 2023, 1:55:46 AM
-    Author     : HoangAnh
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
