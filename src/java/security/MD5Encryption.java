@@ -14,20 +14,11 @@ import javax.xml.bind.DatatypeConverter;
 
 public class MD5Encryption {
 
-//    public String convertPassword(String password) throws NoSuchAlgorithmException {
-//
-//        MessageDigest md = MessageDigest.getInstance("MD5");
-//        md.update(password.getBytes());
-//        byte[] digest = md.digest();
-//        String passwordMD5 = DatatypeConverter.printHexBinary(digest).toUpperCase();
-//
-//        return passwordMD5;
-//    }
-    public String convertPassword(String password) throws NoSuchAlgorithmException{
-          MessageDigest md = MessageDigest.getInstance("MD5");
-          md.update(password.getBytes());
-          byte[] digest = md.digest();
-          String passwordMD5 = DatatypeConverter.printHexBinary(digest).toUpperCase();
-          return passwordMD5;
+    public String convertPassword(String password) throws NoSuchAlgorithmException {
+        MessageDigest md = MessageDigest.getInstance("MD5");
+        md.update(password.getBytes());
+        byte[] digest = md.digest();
+        String passwordMD5 = DatatypeConverter.printHexBinary(digest).toUpperCase();
+        return passwordMD5;
     }
 }

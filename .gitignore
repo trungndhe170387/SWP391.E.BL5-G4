@@ -24,3 +24,5 @@ hs_err_pid*
 replay_pid*
 /nbproject/private/
 /SWP391G4/nbproject/private/
+/dist/
+/build/
