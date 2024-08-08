@@ -79,6 +79,17 @@
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
+<<<<<<< HEAD
+                    <file>${file.reference.org-netbeans-modules-java-j2seproject-copylibstask.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.lib-CopyLibs}</file>
+                    <path-in-war>WEB-INF/classes</path-in-war>
+                </library>
+                <library dirs="200">
+=======
+>>>>>>> 18594933948fdfda16656a05ccbd0fc838f1e9cb
                     <file>${file.reference.jakarta.servlet.jsp.jstl-2.0.0.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
@@ -91,6 +102,9 @@
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
+<<<<<<< HEAD
+                    <file>${file.reference.javax.mail__1_.jar}</file>
+=======
                     <file>${file.reference.javax.activation-1.2.0-javadoc.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
@@ -100,6 +114,7 @@
                 </library>
                 <library dirs="200">
                     <file>${file.reference.javax.mail.jar}</file>
+>>>>>>> 18594933948fdfda16656a05ccbd0fc838f1e9cb
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
@@ -158,6 +173,13 @@
                     <file>${file.reference.xmlbeans-5.1.1.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
+<<<<<<< HEAD
+                <library dirs="200">
+                    <file>${file.reference.javax.activation-1.2.0.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+=======
+>>>>>>> 18594933948fdfda16656a05ccbd0fc838f1e9cb
             </web-module-libraries>
             <web-module-additional-libraries/>
             <source-roots>
