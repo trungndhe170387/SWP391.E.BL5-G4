@@ -135,7 +135,7 @@
                                                     <img src="img/CART.png" style="height: 50px"alt=""/>
                                                 </div>
                                                 <div >
-                                                    <a style="height: 15px" href="cart">(${size})</a>
+                                                    <a style="height: 15px" href="cart.jsp">(${size})</a>
                                                 </div>
                                             </div>
                                         </li>
