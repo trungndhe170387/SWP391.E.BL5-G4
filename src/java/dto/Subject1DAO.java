@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package dto;
 
 import java.sql.PreparedStatement;
@@ -16,7 +12,10 @@ import model.Learner_Course;
 import model.Learner_Subject;
 import model.Subject;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2eb3828239ec555ac523824d23f9c5ab3a6f6a17
 public class Subject1DAO extends DBContext {
 
     // Lay tat ca cac Subject
