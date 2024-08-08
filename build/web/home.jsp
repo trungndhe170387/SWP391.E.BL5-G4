@@ -84,7 +84,7 @@
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-7 col-md-12">
                                         <div class="hero__caption">
-                                            <h1 data-animation="fadeInLeft" data-delay="0.2s">Welcome to<br> HolaLearn</h1>
+                                            <h1 data-animation="fadeInLeft" data-delay="0.2s">Welcome to<br> SWP391.E.BL5.G4</h1>
                                             <p data-animation="fadeInLeft" data-delay="0.4s">Build skills with courses, certificates, and degrees online from world-class universities and companies</p>
                                             
                                         </div>
