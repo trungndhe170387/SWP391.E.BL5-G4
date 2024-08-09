@@ -14,10 +14,6 @@ import model.Account;
 
 import security.MD5Encryption;
 
-/**
- *
- * @author HoangAnh
- */
 @WebServlet(name = "ChangePasswordController", urlPatterns = "/changepassword")
 public class ChangePasswordController extends BaseRequiredAuthorizationController {
 

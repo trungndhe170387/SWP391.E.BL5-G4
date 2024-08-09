@@ -1,8 +1,4 @@
-<%-- 
-    Document   : home
-    Created on : Sep 19, 2023, 2:19:27 AM
-    Author     : lam12
---%>
+
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
@@ -84,9 +80,9 @@
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-7 col-md-12">
                                         <div class="hero__caption">
-                                            <h1 data-animation="fadeInLeft" data-delay="0.2s">Welcome to<br> SWP391.BL5.G4 Learn</h1>
+                                            <h1 data-animation="fadeInLeft" data-delay="0.2s">Welcome to<br> HolaLearn</h1>
                                             <p data-animation="fadeInLeft" data-delay="0.4s">Build skills with courses, certificates, and degrees online from world-class universities and companies</p>
-                                            
+                                            <a href="#" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s">Join for Free</a>
                                         </div>
                                     </div>
                                 </div>
@@ -628,13 +624,13 @@
                 hours = hours - (days * 24);
                 minutes = minutes - (days * 24 * 60) - (hours * 60);
                 seconds = seconds - (days * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60);
-                return {days, hours, minutes, seconds};
+                return {days, hours, minutes, seconds}
             }
 
         }
 
         const countdownEls = document.querySelectorAll(".countdown") || [];
-        countdownEls.forEach(countdownEl => new Countdown(countdownEl));
+        countdownEls.forEach(countdownEl => new Countdown(countdownEl))
 
     </script>
 

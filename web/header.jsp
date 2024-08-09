@@ -1,8 +1,3 @@
-<%-- 
-    Document   : courselist
-    Created on : Sep 18, 2023, 3:45:17 PM
-    Author     : admin
---%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -66,7 +61,7 @@
                     <!-- Logo -->
                     <div class="col-xl-2 col-lg-2">
                         <div class="logo">
-                            <a href="home"><img src="assets/img/logo/logo.png" alt=""></a>
+                            <a href="/SWP391.E.BL5-G4/home"><img src="assets/img/logo/logo.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-xl-10 col-lg-10">
@@ -75,7 +70,7 @@
                             <div class="main-menu d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">                                                                                          
-                                        <li class="active" ><a href="home">Home</a></li>
+                                        <li class="active" ><a href="/SWP391.E.BL5-G4/home">Home</a></li>
                                         <li><a href="subjectlist">Subject</a></li>
                                         <li><a href="sliderlist">Slider</a>
                                             <ul class="submenu">
@@ -135,7 +130,7 @@
                                                     <img src="img/CART.png" style="height: 50px"alt=""/>
                                                 </div>
                                                 <div >
-                                                    <a style="height: 15px" href="cart.jsp">(${size})</a>
+                                                    <a style="height: 15px" href="cart">(${size})</a>
                                                 </div>
                                             </div>
                                         </li>

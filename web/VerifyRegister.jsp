@@ -1,8 +1,4 @@
-<%-- 
-    Document   : VerifyRegister
-    Created on : Sep 19, 2023, 9:44:41 PM
-    Author     : HoangAnh
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -18,7 +14,7 @@
         <div class="container mx-auto">
             <div class="max-w-sm mx-auto md:max-w-lg">
                 <div class="w-full">
-                    <div class="bg-white h-70 py-3 rounded text-center">
+                    <div class="bg-white h-70 p-10 rounded text-center">
                         <h1 class="text-2xl font-bold">OTP Verification</h1>
                         
                         <div class="flex flex-col mt-4">
@@ -35,13 +31,14 @@
                             <input type="hidden" name="address" value="${address}">
                             <input type="hidden" name="otp" value="${otp}">
                             <input type="hidden" id="count" name="count" value="${count}"> 
-                            <div name="otp" class="flex flex-row justify-center text-center px-2 mt-5">
-                                <input class="m-2 border h-10 w-70 text-center form-control rounded" type="text" name="otpInput" maxlength="6" /> 
+                            <div name="otp" class="flex flex-row justify-center text-center px-2 mt-5 h-10]">
+                                <input class="mx-2 border w-70 text-center form-control rounded py-2 px-4" type="text" name="otpInput" maxlength="6" /> 
+                                 <input type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" value="VERIFY"/>
                             </div>
-                            <input type="submit" class="btn-success" value="VERIFY"/>
+                           
                             <p><h2 class="text-danger">${mess}</h2></p>
                             <div class="flex justify-between text-center mt-5">
-                                <a href="verifyregister" class="flex items-center text-silver hover:text-blue-900 cursor-pointer"><i class="ri-arrow-left-line text-xl mr-1"></i><span class="font-bold">Back</span></a>
+                                <a class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded" href="verifyregister" class="flex items-center text-silver hover:text-blue-900 cursor-pointer"><i class="ri-arrow-left-line text-xl mr-1"></i><span class="font-bold">Back</span></a>
                             </div>
                         </form>
                     </div>

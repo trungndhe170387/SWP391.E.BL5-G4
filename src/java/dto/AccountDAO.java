@@ -20,10 +20,7 @@ import java.util.logging.Logger;
 import model.Account;
 import security.MD5Encryption;
 
-/**
- *
- * @author lam12
- */
+
 public class AccountDAO extends DBContext {
 
     //login

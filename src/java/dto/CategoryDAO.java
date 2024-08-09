@@ -11,10 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import model.Category;
 
-/**
- *
- * @author lam12
- */
+
 public class CategoryDAO extends DBContext {
 
     public List<Category> getAllCategory() {

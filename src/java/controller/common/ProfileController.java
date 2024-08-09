@@ -23,10 +23,6 @@ import com.google.gson.JsonObject;
 
 import model.Account;
 
-/**
- *
- * @author lam12
- */
 @MultipartConfig
 @WebServlet(name = "ProfileController", urlPatterns = {"/profile"})
 public class ProfileController extends HttpServlet {
