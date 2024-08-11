@@ -10,47 +10,43 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.util.List;
 import model.Category;
-import model.Course;
-import model.Learner_Subject;
 import model.Subject;
 
 /**
  *
  * @author admin
  */
-@WebServlet(name = "SubjectListController", urlPatterns = {"/subjectlist"})
-public class SubjectListController extends HttpServlet {
+@WebServlet(name="SubjectByCategoryIdController", urlPatterns={"/subjectcategory"})
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
+public class SubjectByCategoryIdController extends HttpServlet {
+   
+    /** 
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try ( PrintWriter out = response.getWriter()) {
+        try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet CourseListController</title>");
+            out.println("<title>Servlet CourseByCategoryIdController</title>");  
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet CourseListController at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet CourseByCategoryIdController at " + request.getContextPath () + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
-    }
+    } 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
+    /** 
      * Handles the HTTP <code>GET</code> method.
-     *
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
@@ -58,28 +54,37 @@ public class SubjectListController extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    throws ServletException, IOException {
         //processRequest(request, response);
         Subject1DAO s = new Subject1DAO();
-        List<Subject> listS = s.getAllSubject();
-        List<Category> listCY = s.getAllCategory();
+        String category_id_raw = request.getParameter("category_id");
+        
+        try{
+        int category_id = Integer.parseInt(category_id_raw);
         String[] listPrice = {
             "On Sale",
             "Under $100",
             "$100 - $500",
             "Above $500"
         };
-        int flag = 1;
-        request.setAttribute("flag", flag);
-        request.setAttribute("listCY", listCY);
+        int flag = 2;
+        request.setAttribute("flag",flag);
+        List<Category> listCY = s.getAllCategory();
+        List<Subject> listS = s.getAllSubjectByCtegoryId(category_id);
         request.setAttribute("listPrice", listPrice);
+        request.setAttribute("category_id", category_id);
+        request.setAttribute("listCY", listCY);
         request.setAttribute("listS", listS);
         request.getRequestDispatcher("subjectlist.jsp").forward(request, response);
-    }
+        
+        } catch(Exception e){
+            
+        }
+        
+    } 
 
-    /**
+    /** 
      * Handles the HTTP <code>POST</code> method.
-     *
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
@@ -87,14 +92,12 @@ public class SubjectListController extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        //processRequest(request, response);
-
+    throws ServletException, IOException {
+        processRequest(request, response);
     }
 
-    /**
+    /** 
      * Returns a short description of the servlet.
-     *
      * @return a String containing servlet description
      */
     @Override

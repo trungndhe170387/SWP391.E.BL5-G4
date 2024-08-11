@@ -1,5 +1,6 @@
 package controller.common;
 
+import dto.Course1DAO;
 import dto.Subject1DAO;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -8,18 +9,18 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.util.List;
-import model.Category;
+import model.Account;
 import model.Course;
-import model.Learner_Subject;
 import model.Subject;
 
 /**
  *
  * @author admin
  */
-@WebServlet(name = "SubjectListController", urlPatterns = {"/subjectlist"})
-public class SubjectListController extends HttpServlet {
+@WebServlet(name = "SubjectDetailController", urlPatterns = "/subjectdetail")
+public class SubjectDetailController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,10 +39,10 @@ public class SubjectListController extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet CourseListController</title>");
+            out.println("<title>Servlet CourseDetailController</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet CourseListController at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet CourseDetailController at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -61,20 +62,31 @@ public class SubjectListController extends HttpServlet {
             throws ServletException, IOException {
         //processRequest(request, response);
         Subject1DAO s = new Subject1DAO();
-        List<Subject> listS = s.getAllSubject();
-        List<Category> listCY = s.getAllCategory();
-        String[] listPrice = {
-            "On Sale",
-            "Under $100",
-            "$100 - $500",
-            "Above $500"
-        };
-        int flag = 1;
-        request.setAttribute("flag", flag);
-        request.setAttribute("listCY", listCY);
-        request.setAttribute("listPrice", listPrice);
-        request.setAttribute("listS", listS);
-        request.getRequestDispatcher("subjectlist.jsp").forward(request, response);
+        Course1DAO c = new Course1DAO();
+        String subject_id_raw = request.getParameter("subject_id");
+        String category_id_raw = request.getParameter("category_id");
+        int active;
+        HttpSession session = request.getSession();
+        Account account = (Account)session.getAttribute("account");
+        try {
+            int subject_id = Integer.parseInt(subject_id_raw);
+            int category_id = Integer.parseInt(category_id_raw);
+            if(account != null){
+                 active = s.getSubjectActive(subject_id,account.getAccount_id());
+            } else {
+                active = 0;
+        }
+            List<Course> listC = c.getCourseBySubjectId(subject_id);
+            List<Subject> listRS = s.getRelatedSubjectByCategoryID(subject_id, category_id);
+            Subject subject = s.getSubject(subject_id);
+            request.setAttribute("active", active);
+            request.setAttribute("subject", subject);
+            request.setAttribute("listRS", listRS);
+            request.setAttribute("listC", listC);
+            request.setAttribute("category_id", category_id);
+            request.getRequestDispatcher("subject_detail.jsp").forward(request, response);
+        } catch (Exception e) {
+        }
     }
 
     /**
@@ -88,8 +100,7 @@ public class SubjectListController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
-
+        processRequest(request, response);
     }
 
     /**
