@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/main
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -55,7 +60,8 @@
                                             <!-- breadcrumb Start-->
                                             <nav aria-label="breadcrumb">
                                                 <ol class="breadcrumb">
-                                                    <li class="breadcrumb-item"><a href="home">Home</a></li>
+                                                    <li class="breadcrumb-item"><a href="/SWP391.E.BL5-G4/home">Home</a></li>
+                                                    <li class="breadcrumb-item"><a href="#">Services</a></li> 
                                                 </ol>
                                             </nav>
                                             <!-- breadcrumb End -->

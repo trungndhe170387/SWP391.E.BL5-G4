@@ -1,8 +1,4 @@
-<%-- 
-    Document   : header2.jsp
-    Created on : Oct 7, 2023, 3:19:25 PM
-    Author     : admin
---%>
+
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

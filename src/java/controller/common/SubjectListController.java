@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
+ */
+>>>>>>> origin/main
 package controller.common;
 
 import dto.Subject1DAO;
@@ -14,10 +21,6 @@ import model.Course;
 import model.Learner_Subject;
 import model.Subject;
 
-/**
- *
- * @author admin
- */
 @WebServlet(name = "SubjectListController", urlPatterns = {"/subjectlist"})
 public class SubjectListController extends HttpServlet {
 
