@@ -4,10 +4,7 @@
  */
 package model;
 
-/**
- *
- * @author admin
- */
+
 public class Learner_Subject {
     private int id;
     private int learner_id;

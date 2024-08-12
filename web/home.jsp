@@ -1,5 +1,4 @@
 
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -8,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Courses | Education</title>
+        <title>SWP391.E.BL5.G4 | Education</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="manifest" href="site.webmanifest">
@@ -80,7 +79,7 @@
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-7 col-md-12">
                                         <div class="hero__caption">
-                                            <h1 data-animation="fadeInLeft" data-delay="0.2s">Welcome to<br> HolaLearn</h1>
+                                            <h1 data-animation="fadeInLeft" data-delay="0.2s">Welcome to<br> SWP391.E.BL5.G4</h1>
                                             <p data-animation="fadeInLeft" data-delay="0.4s">Build skills with courses, certificates, and degrees online from world-class universities and companies</p>
                                             <a href="#" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s">Join for Free</a>
                                         </div>

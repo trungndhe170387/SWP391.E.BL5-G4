@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import model.Feature;
 import model.Account;
 
+
 public abstract class BaseRequiredAuthorizationController extends BaseAuthenticationController {
 
     private boolean isAuthorization(HttpServletRequest request, Account acc) {
@@ -38,8 +39,9 @@ public abstract class BaseRequiredAuthorizationController extends BaseAuthentica
         if (isAuthorization(request, acc)) {
             doAuthGet(request, response, acc);
         } else {
-                        doAuthGet(request, response, acc);
-
+            String message = "You do not have permission to access this page";
+            request.setAttribute("message", message);
+            request.getRequestDispatcher("home.jsp").forward(request, response);
         }
     }
 
@@ -48,8 +50,9 @@ public abstract class BaseRequiredAuthorizationController extends BaseAuthentica
         if (isAuthorization(request, acc)) {
             doAuthPost(request, response, acc);
         } else {
-                        doAuthPost(request, response, acc);
-
+            String message = "You do not have permission to access this page";
+            request.setAttribute("message", message);
+            request.getRequestDispatcher("home.jsp").forward(request, response);
         }
     }
 

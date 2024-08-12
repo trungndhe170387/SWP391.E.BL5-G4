@@ -4,10 +4,7 @@
  */
 package model;
 
-/**
- *
- * @author Admin
- */
+
 public class Slider {
     private int id;
     private String image;
