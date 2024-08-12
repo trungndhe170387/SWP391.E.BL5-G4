@@ -72,7 +72,11 @@
         </script>
     </head>
     <body>
+<<<<<<< HEAD
+        <jsp:include page="header.jsp"></jsp:include>  
+=======
         <jsp:include page="header3.jsp"></jsp:include>  
+>>>>>>> 50e0590cedc61de77d14f50d4efd376d201b7d85
 
             <!-- Header End -->
             <div>
@@ -531,7 +535,11 @@
                                                             searchable: false,
                                                             render: function (data, type, row) {
                                                                 return '<a href="slideredit?id=' + row.id + '" class="genric-btn danger-border" onclick="fin()"><button type="button" class="btn btn-primary">Edit</button></a>' +
+<<<<<<< HEAD
+                                                                        '<a href="sliderdelete?id=' + row.id + '" class="genric-btn danger-border" onclick="fin1()"><button type="button" class="btn btn-danger">Delete</button></a>';
+=======
                                                                         '<a id="delete'+row.id+'" href="" class="genric-btn danger-border" onclick="fin1('+row.id+')"><button type="button" class="btn btn-danger">Delete</button></a>';
+>>>>>>> 50e0590cedc61de77d14f50d4efd376d201b7d85
                                                             }
                                                         }
                                                     ]
@@ -774,11 +782,16 @@
 
 </script>
 <script type="text/javascript">
+<<<<<<< HEAD
+    function fin1() {
+        confirm("Are you sure to delete this slider?");
+=======
     function fin1(id) {
         
         if(confirm("Are you sure to delete this slider?")){
             $('#delete'+id).attr("href", "sliderdelete?id="+id);
         }
+>>>>>>> 50e0590cedc61de77d14f50d4efd376d201b7d85
     }
 </script>
 </html>
