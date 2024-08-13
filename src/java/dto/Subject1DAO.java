@@ -482,16 +482,4 @@ public class Subject1DAO extends DBContext {
         }
         return list;
     }
-
-    public static void main(String[] args) {
-        // Tạo đối tượng DAO
-        Subject1DAO subjectDao = new Subject1DAO();
-
-        // Test phương thức getAllSubject
-        System.out.println("Testing getAllSubject:");
-        List<Subject> subjects = subjectDao.getAllSubject();
-        for (Subject subject : subjects) {
-            System.out.println("Subject ID: " + subject.getSubject_id() + ", Name: " + subject.getSubject_name());
-        }
-    }
 } //end dao
