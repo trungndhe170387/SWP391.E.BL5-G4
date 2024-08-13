@@ -11,7 +11,13 @@ import java.util.ArrayList;
 import java.util.List;
 import model.Category;
 
-
+<<<<<<< HEAD
+/**
+ *
+ * @author lam12
+ */
+=======
+>>>>>>> 50e0590cedc61de77d14f50d4efd376d201b7d85
 public class CategoryDAO extends DBContext {
 
     public List<Category> getAllCategory() {

@@ -12,6 +12,7 @@ import java.io.IOException;
 import model.Account;
 
 
+
 public abstract class BaseAuthenticationController extends HttpServlet {
 
     public boolean isAuthenticated(HttpServletRequest request) {

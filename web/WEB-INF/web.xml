@@ -16,6 +16,10 @@
         <servlet-name>ManageSubjectController</servlet-name>
         <servlet-class>controller.auth.ManageSubjectController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BlogAddController</servlet-name>
+        <servlet-class>controller.auth.BlogAddController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeController</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -36,11 +40,11 @@
         <servlet-name>CartServlet</servlet-name>
         <jsp-file>/cart.jsp</jsp-file>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>CartServlet</servlet-name>
         <url-pattern>/cart</url-pattern>
     </servlet-mapping>
+
     <session-config>
         <session-timeout>
             30
@@ -48,6 +52,5 @@
     </session-config>
     <welcome-file-list>
         <welcome-file>home.jsp</welcome-file>
-        
     </welcome-file-list>
 </web-app>

@@ -1,4 +1,8 @@
-
+<%-- 
+    Document   : UserProfile
+    Created on : Sep 20, 2023, 1:22:08 PM
+    Author     : lam12
+--%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -8,7 +12,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>HolaLearn - Your profile</title>
+        <title>SWP391.E.BL5.G4 - Your profile</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"
                 integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -221,6 +225,13 @@
                                                         <label class="form-label">Phone</label>
                                                         <input class="form-control" type="number" name="phone" disabled="disabled" value="" id="phone">
                                                         <span id="phoneError" class="error"></span><br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <a href="changepassword" class="btn btn-default text-lg-left" style="">Change Password</a>
                                                     </div>
                                                 </div>
                                             </div>
