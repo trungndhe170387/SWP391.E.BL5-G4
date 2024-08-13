@@ -39,13 +39,10 @@ public abstract class BaseRequiredAuthorizationController extends BaseAuthentica
         if (isAuthorization(request, acc)) {
             doAuthGet(request, response, acc);
         } else {
-<<<<<<< HEAD
             doAuthGet(request, response, acc);
-=======
             String message = "You do not have permission to access this page";
             request.setAttribute("message", message);
             request.getRequestDispatcher("home.jsp").forward(request, response);
->>>>>>> 50e0590cedc61de77d14f50d4efd376d201b7d85
         }
     }
 
@@ -54,13 +51,10 @@ public abstract class BaseRequiredAuthorizationController extends BaseAuthentica
         if (isAuthorization(request, acc)) {
             doAuthPost(request, response, acc);
         } else {
-<<<<<<< HEAD
             doAuthPost(request, response, acc);
-=======
             String message = "You do not have permission to access this page";
             request.setAttribute("message", message);
             request.getRequestDispatcher("home.jsp").forward(request, response);
->>>>>>> 50e0590cedc61de77d14f50d4efd376d201b7d85
         }
     }
 }
