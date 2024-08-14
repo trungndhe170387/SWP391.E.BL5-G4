@@ -9,10 +9,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import model.Account;
 
-/**
- *
- * @author lam12
- */
 @WebServlet(name = "SubjectManagement", urlPatterns = {"/subjectmanagement"})
 public class SubjectManagement extends BaseRequiredAuthorizationController {
 
