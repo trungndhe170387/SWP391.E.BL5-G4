@@ -11,15 +11,15 @@ public class DBContext {
     public DBContext()
     {
         try {
-            // Edit URL , username, password to authenticate with your MS SQL Server
-            String url = "jdbc:sqlserver://localhost:1433;databaseName=HolaLearn1";
+
+            // Edit URL, username, password to authenticate with your MS SQL Server
+            String url = "jdbc:sqlserver://localhost:1434;databaseName=HolaLearn";
             String username = "sa";
-            String password = "trung2003";
+            String password = "123456";
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             connection = DriverManager.getConnection(url, username, password);
         } catch (ClassNotFoundException | SQLException ex) {
             System.out.println(ex);
         }
     }
-    
 }

@@ -18,10 +18,6 @@ import model.Category;
 import model.Course;
 import model.Subject;
 
-/**
- *
- * @author lam12
- */
 public class CourseDAO extends DBContext {
 
     public List<Course> getAllCourseBySubjectId(String subject_id) {

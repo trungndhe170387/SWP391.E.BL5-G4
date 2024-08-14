@@ -23,6 +23,7 @@ import com.google.gson.JsonObject;
 
 import model.Account;
 
+
 @MultipartConfig
 @WebServlet(name = "ProfileController", urlPatterns = {"/profile"})
 public class ProfileController extends HttpServlet {
@@ -82,7 +83,7 @@ public class ProfileController extends HttpServlet {
             throws ServletException, IOException {
         String status = null;
         String imageName = null;
-        String savePath = "D:/FPTU/Sem5/SWP391/ImageRepository/";
+        String savePath = "E:/Ki_5/SWP391/ImageRepository/";
         File file = new File(savePath);
         if (!file.exists()) {
             file.mkdirs();

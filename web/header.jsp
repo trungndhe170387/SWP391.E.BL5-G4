@@ -1,4 +1,5 @@
 
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -61,7 +62,7 @@
                     <!-- Logo -->
                     <div class="col-xl-2 col-lg-2">
                         <div class="logo">
-                            <a href="/SWP391.E.BL5-G4/home"><img src="assets/img/logo/logo.png" alt=""></a>
+                            <a href="home"><img src="assets/img/logo/logo.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-xl-10 col-lg-10">
@@ -70,7 +71,7 @@
                             <div class="main-menu d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">                                                                                          
-                                        <li class="active" ><a href="/SWP391.E.BL5-G4/home">Home</a></li>
+                                        <li class="active" ><a href="home">Home</a></li>
                                         <li><a href="subjectlist">Subject</a></li>
                                         <li><a href="sliderlist">Slider</a>
                                             <ul class="submenu">

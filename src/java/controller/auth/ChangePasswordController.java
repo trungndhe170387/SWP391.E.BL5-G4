@@ -14,6 +14,7 @@ import model.Account;
 
 import security.MD5Encryption;
 
+
 @WebServlet(name = "ChangePasswordController", urlPatterns = "/changepassword")
 public class ChangePasswordController extends BaseRequiredAuthorizationController {
 
@@ -58,8 +59,8 @@ public class ChangePasswordController extends BaseRequiredAuthorizationControlle
         } else if (!newPass.equals(confirmPass)) {
             request.setAttribute("err", "Confirm password is incorrect");
             request.getRequestDispatcher("ChangePassword.jsp").forward(request, response);
-        } else if (!newPass_raw.matches(PASSWORD_REGEX)) {
-            request.setAttribute("err", "Your password must has at least 8 characters and contain uppercase, lowercase, number and specical syntax (!, @, #, $, %)");
+        } else if (newPass_raw.matches(PASSWORD_REGEX)) {
+            request.setAttribute("mess", "Your password must has at least 8 characters and contain uppercase, lowercase, number and specical syntax (!, @, #, $, %)");
             request.getRequestDispatcher("ChangePassword.jsp").forward(request, response);
         } else {
             AccountDAO ad = new AccountDAO();
