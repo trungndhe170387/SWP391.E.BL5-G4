@@ -482,4 +482,7 @@ public class Subject1DAO extends DBContext {
         }
         return list;
     }
+    public static void main(String[] args) {
+        System.out.println(new Subject1DAO().getAllSubject());
+    }
 } //end dao
