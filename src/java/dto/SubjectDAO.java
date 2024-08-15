@@ -16,7 +16,6 @@ import model.Category;
 
 import model.Subject;
 
-
 public class SubjectDAO extends DBContext {
 
     // get subject of lecturer and search ajax
@@ -320,8 +319,7 @@ public class SubjectDAO extends DBContext {
     }
     public static void main(String[] args) {
         SubjectDAO s = new SubjectDAO();
-        System.out.println(        s.updateSubjectWithSubjectIDByLecturer("Subject Test", "huhuhufsdf", null, 10, 1000, 1, 6)
-);
+        System.out.println(s.updateSubjectWithSubjectIDByLecturer("Subject Test", "huhuhufsdf", null, 10, 1000, 1, 6));
         List<Subject> lists = s.getTop5MostRatedSubjects();
                 List<Subject> lists2 = s.getTop4NewestSubject();
         System.out.println(lists);

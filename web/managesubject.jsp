@@ -1,3 +1,9 @@
+<%-- 
+    Document   : course_detai
+    Created on : Sep 19, 2023, 1:31:08 PM
+    Author     : admin
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -45,6 +51,7 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
         <style>
+
             #subjecttable{
                 width: 100%;
             }
@@ -344,6 +351,19 @@
             .modal form label {
                 font-weight: normal;
             }
+            .card {
+    height: 700px; /* Đặt chiều cao cố định */
+}
+
+.card-img-top {
+    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+    height: 200px; /* Đặt chiều cao cho hình ảnh */
+}
+
+.card-body {
+    flex-grow: 1; /* Để card body chiếm không gian còn lại */
+}
+
         </style>
         <script>
             $(document).ready(function () {

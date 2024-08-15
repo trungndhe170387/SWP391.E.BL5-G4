@@ -8,22 +8,22 @@ package model;
  *
  * @author admin
  */
-public class Learner_Course {
+public class QuizResult {
     private int id;
     private int learner_id;
-    private int course_id;
+    private int quiz_id;
+    private float mark;
     private int status;
-    private float rate;
 
-    public Learner_Course() {
+    public QuizResult() {
     }
 
-    public Learner_Course(int id, int learner_id, int course_id, int status, float rate) {
+    public QuizResult(int id, int learner_id, int quiz_id, float mark, int status) {
         this.id = id;
         this.learner_id = learner_id;
-        this.course_id = course_id;
+        this.quiz_id = quiz_id;
+        this.mark = mark;
         this.status = status;
-        this.rate = rate;
     }
 
     public int getId() {
@@ -42,12 +42,20 @@ public class Learner_Course {
         this.learner_id = learner_id;
     }
 
-    public int getCourse_id() {
-        return course_id;
+    public int getQuiz_id() {
+        return quiz_id;
     }
 
-    public void setCourse_id(int course_id) {
-        this.course_id = course_id;
+    public void setQuiz_id(int quiz_id) {
+        this.quiz_id = quiz_id;
+    }
+
+    public float getMark() {
+        return mark;
+    }
+
+    public void setMark(float mark) {
+        this.mark = mark;
     }
 
     public int getStatus() {
@@ -58,12 +66,11 @@ public class Learner_Course {
         this.status = status;
     }
 
-    public float getRate() {
-        return rate;
+    @Override
+    public String toString() {
+        return "QuizResult{" + "id=" + id + ", learner_id=" + learner_id + ", quiz_id=" + quiz_id + ", mark=" + mark + ", status=" + status + '}';
     }
-
-    public void setRate(float rate) {
-        this.rate = rate;
-    }
+    
+    
     
 }

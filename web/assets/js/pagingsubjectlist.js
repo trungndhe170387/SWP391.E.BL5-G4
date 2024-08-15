@@ -227,7 +227,7 @@
                                         <div class="col-6 py-1">${s.rate_subject}</div>
                                         </div>
                                         </div>
-                                        <a href="subjectdetail?category_id=${s.category_id}&subject_id=${s.subject_id}" class="btn btn-primary px-4 mx-auto mb-4">View</a>`;
+                                        <a href="subjectdetail?category_id=${s.category_id}&subject_id=${s.subject_id}" class="btn btn-primary px-4 mx-auto mb-4" style="width: 180px;">View</a>`;
 
                         if (hasBought) {
                             subjectList += `<a href="#" class="disabled btn btn-primary px-4 mx-auto mb-4 btn fa fa-shopping-bag">Bought Subject</a>
