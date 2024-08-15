@@ -9,3 +9,12 @@ Slider Edit: 2 trans 8 trường
 Slider Add: 2 trans 8 trường
 Slider List : 3 trường, 3 trans
 Kiệt:
+Subject Manage: 9 trường,5 trans
+Lesson View : 5 trường, 2 trans
+Certificate : 3 trường, 2 trans
+Ha:
+Home: 6 tran, 3 trường
+Cart: 2 tran, 3 trường
+payment paypal
+review payment:1 tran, 6 trường
+execute payment:1 tran, 6 trường
