@@ -1,0 +1,11 @@
+Trung:
+ngoài management subject : 2 transaction,2 trường
+Chapter: 5 transaction,3 trường
+Lesson : 7 trans, 5 trường
+User profile: 3 trans, 6 trường
+Slider Manage: 3 trans 10 trường 
+sort, search , show 
+Slider Edit: 2 trans 8 trường
+Slider Add: 2 trans 8 trường
+Slider List : 3 trường, 3 trans
+Kiệt:
