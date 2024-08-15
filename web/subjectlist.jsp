@@ -1,4 +1,8 @@
-
+<%-- 
+    Document   : courselist
+    Created on : Sep 18, 2023, 3:45:17 PM
+    Author     : admin
+--%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -12,7 +16,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>SWP391.E.BL5.G4 | Education</title>
+        <title>Courses | Education</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -34,7 +38,7 @@
         <link rel="stylesheet" href="assets/css/themify-icons.css">
         <link rel="stylesheet" href="assets/css/slick.css">
         <link rel="stylesheet" href="assets/css/nice-select.css">
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/style_1.css">
 
 
 
@@ -57,7 +61,7 @@
                                             <!-- breadcrumb Start-->
                                             <nav aria-label="breadcrumb">
                                                 <ol class="breadcrumb">
-                                                    <li class="breadcrumb-item"><a href="/SWP391.E.BL5-G4/home">Home</a></li>
+                                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                                     <li class="breadcrumb-item"><a href="#">Services</a></li> 
                                                 </ol>
                                             </nav>

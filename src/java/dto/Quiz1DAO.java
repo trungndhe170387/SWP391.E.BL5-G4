@@ -13,10 +13,6 @@ import model.Chapter;
 import model.Quiz;
 import model.QuizResult;
 
-/**
- *
- * @author admin
- */
 public class Quiz1DAO extends DBContext {
 
     // Lay tat ca chapter theo course

@@ -4,7 +4,6 @@
  */
 package model;
 
-
 public class Subject {
 
     private int subject_id;
@@ -143,13 +142,4 @@ public class Subject {
     public void setRate_subject(double rate_subject) {
         this.rate_subject = rate_subject;
     }
-
-    
-    
-    
-
-    
-
-    
-
 }

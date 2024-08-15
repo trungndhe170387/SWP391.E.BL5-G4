@@ -122,11 +122,11 @@ public class LoginController extends HttpServlet {
                 response.sendRedirect("home");
             }
         } else {
-            try {
-                password = new MD5Encryption().convertPassword(password);
-            } catch (NoSuchAlgorithmException ex) {
-                Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
-            }
+//            try {
+//                password = new MD5Encryption().convertPassword(password);
+//            } catch (NoSuchAlgorithmException ex) {
+//                Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+//            }
             Account a = ad.login(username, password);
             if (a == null) {
                 request.setAttribute("mess", "username or password is incorrect");

@@ -250,7 +250,7 @@ public class QuestionBankDAO extends DBContext {
                 // Ignore header
                 continue;
             }
-            q.setRowNum(nextRow.getRowNum()+1);
+            q.setRowNum(nextRow.getRowNum() + 1);
             Iterator<Cell> cellIterator = nextRow.cellIterator();
             while (cellIterator.hasNext()) {
                 //Read cell
@@ -300,7 +300,7 @@ public class QuestionBankDAO extends DBContext {
         }
         if (listError.isEmpty()) {
             for (Question q : list) {
-                    addQuestion(q, chapter, subject);
+                addQuestion(q, chapter, subject);
             }
         }
         return listError;
@@ -394,18 +394,5 @@ public class QuestionBankDAO extends DBContext {
         } catch (SQLException e) {
         }
 
-    }
-
-    // MAIN TEST
-    public static void main(String[] args) throws IOException {
-        QuestionBankDAO q = new QuestionBankDAO();
-        String id = "1";
-        String course[] = {};
-        String chapter[] = {"1", "2"};
-//        q.importQuestion("test1.xlsx", "21", "3");
-//        List<Question> list = q.readExcel("question.xlsx");
-//        for (Question qe : list) {
-//            System.out.println(qe);
-//        }
     }
 }
