@@ -38,11 +38,12 @@ public abstract class BaseRequiredAuthorizationController extends BaseAuthentica
     protected void doGet(HttpServletRequest request, HttpServletResponse response, Account acc) throws ServletException, IOException {
         if (isAuthorization(request, acc)) {
             doAuthGet(request, response, acc);
-        } else {
+        } else {         
             doAuthGet(request, response, acc);
             String message = "You do not have permission to access this page";
             request.setAttribute("message", message);
             request.getRequestDispatcher("home.jsp").forward(request, response);
+
         }
     }
 
@@ -55,6 +56,7 @@ public abstract class BaseRequiredAuthorizationController extends BaseAuthentica
             String message = "You do not have permission to access this page";
             request.setAttribute("message", message);
             request.getRequestDispatcher("home.jsp").forward(request, response);
+
         }
     }
 }
