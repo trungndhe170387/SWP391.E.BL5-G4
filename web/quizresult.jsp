@@ -1,9 +1,3 @@
-<%-- 
-    Document   : bootstrap
-    Created on : Oct 27, 2023, 11:13:01 PM
-    Author     : lam12
---%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>

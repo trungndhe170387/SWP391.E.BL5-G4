@@ -44,7 +44,7 @@
             var lowerCaseComment = commentText.toLowerCase();
 
             // Danh sách các từ khoá bị cấm
-            var blacklistedWords = ["fucked", "spam", "racism"];
+            var blacklistedWords = ["fucked", "spam", "racism", "fuck","nigga","suck"];
 
             // Kiểm tra xem commentText có chứa từ khoá cấm không
             for (var i = 0; i < blacklistedWords.length; i++) {
