@@ -276,7 +276,7 @@ public class AccountDAO extends DBContext {
                 + "      ,[phone] = ?\n"
                 + " WHERE account_id = ?";
         if (fileName != null) {
-            String pathToFile = "D:/FPTU/Sem5/SWP391/ImageRepository/";
+            String pathToFile = "G:/Study/FU_FPT/Test/ImageRepository/";
             File avatarImage = new File(pathToFile + fileName);
             try ( InputStream avatarStream = new FileInputStream(avatarImage)) {
                 PreparedStatement st = connection.prepareStatement(query1);

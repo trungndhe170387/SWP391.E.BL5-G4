@@ -70,7 +70,7 @@ public class ImportAndDeleteQuestionController extends BaseRequiredAuthorization
     protected void doAuthPost(HttpServletRequest request, HttpServletResponse response, Account acc) throws ServletException, IOException {
         String questionChapter = request.getParameter("questionChapter");
         String id = request.getParameter("id");
-        String savePath = "D:/FPTU/Sem5/SWP391/UploadQuestion/";
+        String savePath = "G:/Study/FU_FPT/Test/UploadQuestion/";
         String fileName = "";
         File file = new File(savePath);
         if (!file.exists()) {

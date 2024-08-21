@@ -352,17 +352,17 @@
                 font-weight: normal;
             }
             .card {
-    height: 700px; /* Đặt chiều cao cố định */
-}
+                height: 700px; /* Đặt chiều cao cố định */
+            }
 
-.card-img-top {
-    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
-    height: 200px; /* Đặt chiều cao cho hình ảnh */
-}
+            .card-img-top {
+                object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+                height: 200px; /* Đặt chiều cao cho hình ảnh */
+            }
 
-.card-body {
-    flex-grow: 1; /* Để card body chiếm không gian còn lại */
-}
+            .card-body {
+                flex-grow: 1; /* Để card body chiếm không gian còn lại */
+            }
 
         </style>
         <script>
@@ -392,90 +392,90 @@
     </head>
 
     <body>
-                <jsp:include page="header2.jsp"></jsp:include>  
+        <jsp:include page="header2.jsp"></jsp:include>  
 
 
-        <div>
-            <div class="table-responsive">
-                <div class="table-wrapper">
-                    <div class="table-title">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <h2>Manage <b>Subject</b></h2>
-                            </div>
-                            <div class="col-sm-6">
-                                <button id="addSub" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Subject</span></button>
-                                <a href="viewsubjectlist" class="btn btn-success" ><i class="material-icons"></i> <span>View Subject List</span></a>						
+            <div>
+                <div class="table-responsive">
+                    <div class="table-wrapper">
+                        <div class="table-title">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h2>Manage <b>Subject</b></h2>
+                                </div>
+                                <div class="col-sm-6">
+                                    <button id="addSub" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Subject</span></button>
+                                    <a href="subjectmanagement" class="btn btn-success" ><i class="material-icons"></i> <span>View Subject List</span></a>						
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div style="padding: 5px; padding-bottom: 20px; font-size: 17px">
-                        <b>Show / Hide Columns:</b>
-                        <a class="showHideColumn" data-columnindex="0">subject_id</a> / 
-                        <a class="showHideColumn" data-columnindex="1">subject_name</a> /
-                        <a class="showHideColumn" data-columnindex="2">description</a> /
-                        <a class="showHideColumn" data-columnindex="3">price</a> /
-                        <a class="showHideColumn" data-columnindex="4">discount</a> / 
-                        <a class="showHideColumn" data-columnindex="5">sold</a> / 
-                        <a class="showHideColumn" data-columnindex="6">created_date</a> / 
-                        <a class="showHideColumn" data-columnindex="7">updated_date</a> / 
-                        <a class="showHideColumn" data-columnindex="8">image</a>
-                    </div>
-
-                    <!--Table-->
-                    <table class="table table-striped table-hover" id="subjecttable">
-                        <thead>
-                            <tr>
-                                <th>subject_id</th>
-                                <th>subject_name</th>
-                                <th>description</th>
-                                <th>price</th>
-                                <th>discount</th>
-                                <th>sold</th>
-                                <th>created_date</th>
-                                <th>updated_date</th>
-                                <th>image</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                        <tfoot>
-                            <tr>
-                                <th>subject_id</th>
-                                <th>subject_name</th>
-                                <th>description</th>
-                                <th>price</th>
-                                <th>discount</th>
-                                <th>sold</th>
-                                <th>created_date</th>
-                                <th>updated_date</th>
-                                <th>image</th>
-                                <th></th>
-                            </tr>
-                        </tfoot>
-                    </table>
-
-                </div>
-            </div>        
-        </div>
-
-        <!--Edit Modal-->
-        <div id="editSubjectModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <form action="managesubject" method="post" id="editSubjectForm" enctype="multipart/form-data">
-                        <div class="modal-header">						
-                            <h4 class="modal-title">Edit Subject</h4>
-                            <button type="button" class="close" data-dismiss="modal" id="edit_close-button" aria-hidden="true">&times;</button>
+                        <div style="padding: 5px; padding-bottom: 20px; font-size: 17px">
+                            <b>Show / Hide Columns:</b>
+                            <a class="showHideColumn" data-columnindex="0">subject_id</a> / 
+                            <a class="showHideColumn" data-columnindex="1">subject_name</a> /
+                            <a class="showHideColumn" data-columnindex="2">description</a> /
+                            <a class="showHideColumn" data-columnindex="3">price</a> /
+                            <a class="showHideColumn" data-columnindex="4">discount</a> / 
+                            <a class="showHideColumn" data-columnindex="5">sold</a> / 
+                            <a class="showHideColumn" data-columnindex="6">created_date</a> / 
+                            <a class="showHideColumn" data-columnindex="7">updated_date</a> / 
+                            <a class="showHideColumn" data-columnindex="8">image</a>
                         </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Subject Name</label>
-                                <input name="subject_name" type="text" class="form-control" placeholder="" required>
+
+                        <!--Table-->
+                        <table class="table table-striped table-hover" id="subjecttable">
+                            <thead>
+                                <tr>
+                                    <th>subject_id</th>
+                                    <th>subject_name</th>
+                                    <th>description</th>
+                                    <th>price</th>
+                                    <th>discount</th>
+                                    <th>sold</th>
+                                    <th>created_date</th>
+                                    <th>updated_date</th>
+                                    <th>image</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>subject_id</th>
+                                    <th>subject_name</th>
+                                    <th>description</th>
+                                    <th>price</th>
+                                    <th>discount</th>
+                                    <th>sold</th>
+                                    <th>created_date</th>
+                                    <th>updated_date</th>
+                                    <th>image</th>
+                                    <th></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+                    </div>
+                </div>        
+            </div>
+
+            <!--Edit Modal-->
+            <div id="editSubjectModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form action="managesubject" method="post" id="editSubjectForm" enctype="multipart/form-data">
+                            <div class="modal-header">						
+                                <h4 class="modal-title">Edit Subject</h4>
+                                <button type="button" class="close" data-dismiss="modal" id="edit_close-button" aria-hidden="true">&times;</button>
                             </div>
-                            <div class="form-group">
-                                <label>Description</label>
-                                <textarea name="description" data-index="edit" rows="4" cols="50" class="form-control"  placeholder="" required>${s.description}</textarea>  
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>Subject Name</label>
+                                    <input name="subject_name" type="text" class="form-control" placeholder="" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea name="description" data-index="edit" rows="4" cols="50" class="form-control"  placeholder="" required>${s.description}</textarea>  
                             </div>
                             <div class="form-group">
                                 <label for="inputGroupFile">Image</label>
@@ -710,7 +710,12 @@
                             }
                         },
                         {data: 'sold'},
-                        {data: 'created_date'},
+                        {data: 'created_date',
+                            render: function (created_date) {
+                                return created_date || 'N/A'; // Provide a default value if created_date is missing
+                            }
+                        },
+
                         {data: 'updated_date',
                             render: function (updated_date) {
                                 if (!updated_date || updated_date === null) {

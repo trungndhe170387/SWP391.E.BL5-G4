@@ -237,7 +237,7 @@ public class QuestionBankDAO extends DBContext {
 
     // ------------- Read File Excel ---------------
     public List<Integer> importQuestion(String excelFilePath, String chapter, String subject) throws IOException {
-        excelFilePath = "D:/FPTU/Sem5/SWP391/UploadQuestion/" + excelFilePath;
+        excelFilePath = "G:/Study/FU_FPT/Test/UploadQuestion/" + excelFilePath;
         List<Question> list = new ArrayList<>();
         InputStream inputStream = new FileInputStream(new File(excelFilePath));
         Workbook workbook = getWorkbook(inputStream, excelFilePath);

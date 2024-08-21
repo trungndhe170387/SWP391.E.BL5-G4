@@ -30,7 +30,7 @@ public class ManageCourseController extends BaseRequiredAuthorizationController 
     @Override
     protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         JsonObject jsonobj = new JsonObject();
-        String savePath = "D:/FPTU/Sem5/SWP391/ImageRepository/";
+        String savePath = "G:/Study/FU_FPT/Test/ImageRepository/";
         File file = new File(savePath);
         if (!file.exists()) {
             file.mkdirs();
@@ -104,7 +104,7 @@ public class ManageCourseController extends BaseRequiredAuthorizationController 
         HttpSession session = request.getSession();
         CourseDAO cd = new CourseDAO();
         JsonObject jsonobj = new JsonObject();
-        String savePath = "D:/FPTU/Sem5/SWP391/ImageRepository/";
+        String savePath = "G:/Study/FU_FPT/Test/ImageRepository/";
         File file = new File(savePath);
         if (!file.exists()) {
             file.mkdirs();

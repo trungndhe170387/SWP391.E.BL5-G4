@@ -53,7 +53,7 @@ public class CourseDAO extends DBContext {
                 + "           ,[course_no])\n"
                 + "     VALUES\n"
                 + "           (?,?,?,?)";
-        String pathToFile = "D:/FPTU/Sem5/SWP391/ImageRepository/";
+        String pathToFile = "G:/Study/FU_FPT/Test/ImageRepository/";
         File courseImage = new File(pathToFile + image);
         try ( InputStream courseStream = new FileInputStream(courseImage)) {
             PreparedStatement st = connection.prepareStatement(query);
@@ -79,7 +79,7 @@ public class CourseDAO extends DBContext {
                 + "      ,[course_no] = ?\n"
                 + " WHERE course_id = ?";
         if (image != null) {
-            String pathToFile = "D:/FPTU/Sem5/SWP391/ImageRepository/";
+            String pathToFile = "G:/Study/FU_FPT/Test/ImageRepository/";
             File courseImage = new File(pathToFile + image);
             try ( InputStream courseStream = new FileInputStream(courseImage)) {
                 PreparedStatement st = connection.prepareStatement(query1);

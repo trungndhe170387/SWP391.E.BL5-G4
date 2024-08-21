@@ -138,7 +138,7 @@ public class SubjectDAO extends DBContext {
                 + " WHERE subject_id = ?\n";
 
         if (image != null) {
-            String pathToFile = "D:/FPTU/Sem5/SWP391/ImageRepository/";
+            String pathToFile = "G:/Study/FU_FPT/Test/ImageRepository/";
             File subjectImage = new File(pathToFile + image);
             try ( InputStream subjectStream = new FileInputStream(subjectImage)) {
                 PreparedStatement st = connection.prepareStatement(query1);
@@ -236,7 +236,7 @@ public class SubjectDAO extends DBContext {
                 + "[lecturer_id])\n"
                 + "VALUES (?,?,?,?,?,getdate(),null,?,?)";
 
-        String pathToFile = "D:/FPTU/Sem5/SWP391/ImageRepository/";
+        String pathToFile = "G:/Study/FU_FPT/Test/ImageRepository";
         File subjectImage = new File(pathToFile + image);
         try ( InputStream subjectStream = new FileInputStream(subjectImage)) {
             PreparedStatement st = connection.prepareStatement(query1);
@@ -319,7 +319,8 @@ public class SubjectDAO extends DBContext {
     }
     public static void main(String[] args) {
         SubjectDAO s = new SubjectDAO();
-        System.out.println(s.updateSubjectWithSubjectIDByLecturer("Subject Test", "huhuhufsdf", null, 10, 1000, 1, 6));
+        System.out.println(        s.updateSubjectWithSubjectIDByLecturer("Subject Test", "huhuhufsdf", null, 10, 1000, 1, 6)
+);
         List<Subject> lists = s.getTop5MostRatedSubjects();
                 List<Subject> lists2 = s.getTop4NewestSubject();
         System.out.println(lists);

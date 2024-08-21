@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package dto;
 
 import java.sql.PreparedStatement;
@@ -482,7 +486,7 @@ public class Subject1DAO extends DBContext {
         }
         return list;
     }
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         System.out.println(new Subject1DAO().getAllSubject());
     }
 } //end dao

@@ -45,7 +45,7 @@ public class ManageSubjectController extends BaseRequiredAuthorizationController
         Gson gson = new Gson();
         JsonObject jsonobj = new JsonObject();
         SubjectDAO sd = new SubjectDAO();
-        String savePath = "D:/FPTU/Sem5/SWP391/ImageRepository/";
+        String savePath = "G:/Study/FU_FPT/Test/ImageRepository";
         File file = new File(savePath);
         if (!file.exists()) {
             file.mkdirs();

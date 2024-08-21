@@ -27,7 +27,7 @@ public class ManageLessonController extends BaseRequiredAuthorizationController 
     @Override
     protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String status;
-        String savePath = "D:/FPTU/Sem5/SWP391/uploadDocument/";
+        String savePath = "G:/Study/FU_FPT/Test/uploadDocument/";
         LessonDAO lessonDAO = new LessonDAO();
         Gson gson = new Gson();
         JsonObject jsonobj = new JsonObject();
@@ -119,7 +119,7 @@ public class ManageLessonController extends BaseRequiredAuthorizationController 
     @Override
     protected void doAuthPost(HttpServletRequest request, HttpServletResponse response, Account acc) throws ServletException, IOException {
         String status;
-        String savePath = "D:/FPTU/Sem5/SWP391/uploadDocument/";
+        String savePath = "G:/Study/FU_FPT/Test/uploadDocument/";
         LessonDAO lessonDAO = new LessonDAO();
         Gson gson = new Gson();
         JsonObject jsonobj = new JsonObject();

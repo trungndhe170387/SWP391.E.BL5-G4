@@ -195,7 +195,7 @@ public class BlogDAO extends DBContext {
                 + " WHERE id= ? ";
         
         if (fileName != null) {
-            String pathToFile = "D:/Sem5_Fall2023/SWP391/image/";
+            String pathToFile = "G:/Study/FU_FPT/Test/image/";
             File avatarImage = new File(pathToFile + fileName);
             try ( InputStream avatarStream = new FileInputStream(avatarImage)) {
                 PreparedStatement st = connection.prepareStatement(sql1);
@@ -284,7 +284,7 @@ public class BlogDAO extends DBContext {
                 + "           ,?\n"
                 + "           ,?)";
         if (fileName != null) {
-            String pathToFile = "D:/Sem5_Fall2023/SWP391/image/";
+            String pathToFile = "G:/Study/FU_FPT/Test/image/";
             File avatarImage = new File(pathToFile + fileName);
             try ( InputStream avatarStream = new FileInputStream(avatarImage)) {
                 PreparedStatement st = connection.prepareStatement(sql);

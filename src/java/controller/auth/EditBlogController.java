@@ -40,7 +40,7 @@ public class EditBlogController extends BaseRequiredAuthorizationController {
     protected void doAuthPost(HttpServletRequest request, HttpServletResponse response, Account acc) throws ServletException, IOException {
         String mess = null;
         String imageName = null;
-        String savePath = "D:/Sem5_Fall2023/SWP391/image/";
+        String savePath = "G:/Study/FU_FPT/Test/image";
         File file = new File(savePath);
         if (!file.exists()) {
             file.mkdirs();

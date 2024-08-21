@@ -1,10 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
+
 package controller.auth;
 
-import dto.BlogDAO;
+import dto.SliderDAO;
 import java.io.IOException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
@@ -16,18 +13,27 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import model.Account;
+import model.Slider;
 
 /**
  *
  * @author Admin
  */
 @MultipartConfig
-@WebServlet(name = "AddBlogController", urlPatterns = {"/blogadd"})
-public class AddBlogController extends BaseRequiredAuthorizationController {
+
+@WebServlet(name = "EditSliderController", urlPatterns = {"/slideredit"})
+public class EditSliderController extends BaseRequiredAuthorizationController {
+
+  
 
     @Override
     protected void doAuthGet(HttpServletRequest request, HttpServletResponse response, Account acc) throws ServletException, IOException {
-        request.getRequestDispatcher("blogadd.jsp").forward(request, response);
+        SliderDAO dao = new SliderDAO();
+        String id_raw = request.getParameter("id");
+        Slider s = dao.getSliderEditByID(id_raw);
+        request.setAttribute("sid", id_raw);
+        request.setAttribute("s", s);
+        request.getRequestDispatcher("slideredit.jsp").forward(request, response);
     }
 
     @Override
@@ -40,15 +46,19 @@ public class AddBlogController extends BaseRequiredAuthorizationController {
             file.mkdirs();
         }
 
-        BlogDAO dao = new BlogDAO();
+        SliderDAO dao = new SliderDAO();
+
         String title = request.getParameter("title");
-        String content = request.getParameter("content");
         String description = request.getParameter("description");
         Part filePart = request.getPart("image");
         String link = request.getParameter("link");
+        String endtime = request.getParameter("endtime");
         String status = request.getParameter("status");
         String marketer_id = request.getParameter("marketer_id");
-        String tag = request.getParameter("tag");
+        String type = request.getParameter("type");
+
+        String id_raw = request.getParameter("id");
+        request.setAttribute("sid", id_raw);
 
         if (filePart.getSize() > 0) {
             imageName = filePart.getSubmittedFileName();
@@ -62,14 +72,19 @@ public class AddBlogController extends BaseRequiredAuthorizationController {
             }
         }
 
-        boolean isSuccess = dao.addBlog(title, content, description, imageName, link, status, marketer_id, tag);
+        boolean isSuccess = dao.editSlider(imageName, title, status, link, marketer_id, type, endtime, description, id_raw);
         if (isSuccess) {
-            mess = "Add successful";
-            request.setAttribute("mess", mess);
-            response.sendRedirect("blog_marketer");
+            mess = "Update successful";
         } else {
-            request.getRequestDispatcher("blogadd").forward(request, response);
+            mess = "Update failed";
         }
+
+        Slider s = dao.getSliderEditByID(id_raw);
+
+        request.setAttribute("s", s);
+        request.setAttribute("mess", mess);
+
+        request.getRequestDispatcher("slideredit.jsp").forward(request, response);
     }
 
 }
