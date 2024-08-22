@@ -16,11 +16,12 @@
     
     <style>
         body {
-            background-color: gainsboro;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
         }
-        .quiz-nav .nav-item {
-            background-color: #6c757d;
-            border: 2px solid #495057;
+        .nav-item1 {
+            background-color: #007bff;
+            border: 2px solid #0056b3;
             margin: 5px;
             height: 50px; /* Chiều cao cố định */
             display: flex;
@@ -28,20 +29,29 @@
             justify-content: center; /* Canh giữa nội dung */
             flex: 1 1 calc(20% - 10px); /* Mỗi ô chiếm 20% chiều rộng */
             box-sizing: border-box; /* Đảm bảo padding và border không ảnh hưởng đến kích thước */
+            border-radius: 5px; /* Bo góc */
+            transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng chuyển đổi */
         }
-        .quiz-nav .nav-link {
-            color: #fff;
+        .nav-link1 {
             width: 100%; /* Để nút chiếm toàn bộ chiều rộng của nav-item */
             text-align: center; /* Canh giữa văn bản */
+            text-decoration: none; /* Bỏ gạch chân */
+        }
+        .nav-item1:hover {
+            background-color: #0056b3; /* Màu nền khi hover */
+            transform: scale(1.05); /* Tăng kích thước khi hover */
         }
         .tab-pane {
-            background-color: #f7f7f7;
+            background-color: #ffffff;
             border: 2px solid #e0e0e0;
             padding: 20px;
+            border-radius: 8px; /* Bo góc */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng */
         }
-        .nav-link.active {
+        .nav-link1.active {
             border: 2px solid #FF3520;
             color: #FF3520;
+            font-weight: bold; /* Đậm chữ khi active */
         }
         .question-taken {
             background-color: #FFE133;
@@ -56,11 +66,12 @@
         }
         h4.nav-quiz-title {
             margin-bottom: 15px;
+            color: #333; /* Màu tiêu đề */
         }
     </style>
 </head>
 <body>
-    <jsp:include page="header2.jsp"></jsp:include> 
+    <jsp:include page="header3.jsp"></jsp:include> 
     <div class="container-fluid my-5">
         <jsp:include page="sidebarlearning.jsp"></jsp:include>
         <jsp:useBean id="qr" class="dto.ChapterDAO" scope="request"></jsp:useBean>
@@ -105,13 +116,13 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-md-4 dynamic-height quiz-nav">
+                    <div class="col-md-4 dynamic-height">
                         <h4 class="nav-quiz-title">Quiz Navigation</h4>
                         <div class="nav flex-wrap" id="nav-tab" role="tablist">
                             <c:forEach var="j" items="${requestScope.quiz}" varStatus="loop">
                                 <c:set var="variable" value="${loop.index + 1}" />
-                                <div class="nav-item">
-                                    <button class="nav-link" id="nav-${j.question_id}-tab" data-bs-toggle="tab"
+                                <div class="nav-item1">
+                                    <button class="nav-link1" id="nav-${j.question_id}-tab" data-bs-toggle="tab"
                                             data-bs-target="#nav-${j.question_id}" type="button" role="tab" aria-controls="nav-${j.question_id}"
                                             aria-selected="true">${variable}</button>
                                 </div>
@@ -153,7 +164,7 @@
                 var parentDiv = $(this).closest(".tab-pane");
                 if (parentDiv.length > 0) {
                     var parentId = parentDiv.attr("id");
-                    var tabItems = $("#nav-tab").find(".nav-item");
+                    var tabItems = $("#nav-tab").find(".nav-item1");
                     tabItems.each(function () {
                         var button = $(this).find('button');
                         if (button.data('bs-target') === '#' + parentId) {
@@ -171,7 +182,7 @@
             function getItemsPerRow() {
                 var rightColumn = $(".dynamic-height");
                 var rowWidth = rightColumn.width();
-                var tabItems = rightColumn.find(".nav-item");
+                var tabItems = rightColumn.find(".nav-item1");
                 var itemsPerRow = 0, totalWidth = 0;
 
                 tabItems.each(function () {
@@ -188,7 +199,7 @@
 
             function setRightColumnHeight() {
                 var rightColumn = $(".dynamic-height");
-                var tabItems = rightColumn.find(".nav-item");
+                var tabItems = rightColumn.find(".nav-item1");
                 var numberItem = tabItems.length;
                 var itemPerRow = getItemsPerRow();
                 var rows = Math.ceil(numberItem / itemPerRow) + 3;
