@@ -29,11 +29,19 @@ import model.QuestionL;
 import model.Quiz;
 import model.QuizResult;
 import model.Subject;
+<<<<<<< HEAD
 import utils.EmailUtils1;
 
 /**
  *
  * @author lam12
+=======
+import utils.EmailUtils;
+
+/**
+ *
+ * @author Admin
+>>>>>>> 6808950bcbcda2d9347f1a7a9393ea9941c65387
  */
 @WebServlet(name = "QuizResultController", urlPatterns = {"/quiz-result"})
 public class QuizResultController extends BaseAuthenticationController {
@@ -135,7 +143,11 @@ HttpSession session = request.getSession();
                 cou.setCourse_id(course_id);
                 cou.setLearner_id(a.getAccount_id());
                 c.updateStatusCourse(cou);
+<<<<<<< HEAD
                 EmailUtils1.sendEmail(a.getEmail(), "Hola Learn", coursecertificateletter);
+=======
+                EmailUtils.sendEmail(a.getEmail(), "Hola Learn", coursecertificateletter);
+>>>>>>> 6808950bcbcda2d9347f1a7a9393ea9941c65387
 
             }
             String links = "http://localhost:9999/holalearn/getcoursecertificate?category_id=" + category_id + "&subject_id=" + subject_id;
@@ -164,7 +176,11 @@ HttpSession session = request.getSession();
                 su.setSubject_id(subject_id);
                 su.setLearner_id(a.getAccount_id());
                 s.updateStatusSubject(su);
+<<<<<<< HEAD
                 EmailUtils1.sendEmail(a.getEmail(), "Hola Learn", subjectcertificateletter);
+=======
+                EmailUtils.sendEmail(a.getEmail(), "Hola Learn", subjectcertificateletter);
+>>>>>>> 6808950bcbcda2d9347f1a7a9393ea9941c65387
             }
             request.setAttribute("listQues", listQues);
             request.setAttribute("mark", mark);
